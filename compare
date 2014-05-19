@@ -10,7 +10,7 @@ for (( ; ; ))
 do
 sleep 30m
 ls -lR /media/Disco160/www/user1/ > /tmp/user1.new
-PEPA=`diff -a /tmp/dcoy /tmp/dcoy.new > /dev/null 2>&1`
+PEPA=`diff -a /tmp/user1 /tmp/user1.new > /dev/null 2>&1`
 TEXT="$?"
 if [ $TEXT -eq "1" ]
 then
