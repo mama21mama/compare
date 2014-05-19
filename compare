@@ -1,0 +1,22 @@
+#!/bin/sh
+#########################################
+# Simple Script en Bash			#
+# Busca modificacion en el Filesystem	#
+# de Hosting				#
+# Creado por http://cut07.tk/cT4	#
+#########################################
+ls -lR /media/Disco160/www/user1/ > /tmp/user1
+for (( ; ; ))
+do
+sleep 30m
+ls -lR /media/Disco160/www/user1/ > /tmp/user1.new
+PEPA=`diff -a /tmp/dcoy /tmp/dcoy.new > /dev/null 2>&1`
+TEXT="$?"
+if [ $TEXT -eq "1" ]
+then
+#echo "funca"
+mail -s "User diferencia Filesystem" "mama21mama2000[at]yahoo.com.ar" <"/tmp/user1.new"
+else
+echo "ninguna modificacion"
+fi
+done
