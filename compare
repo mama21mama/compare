@@ -14,7 +14,7 @@ PEPA=`diff -a /tmp/user1 /tmp/user1.new > /dev/null 2>&1`
 TEXT="$?"
 if [ $TEXT -eq "1" ]
 then
-#echo "funca"
+#echo "hubo modificacion"
 mail -s "User diferencia Filesystem" "mama21mama2000[at]yahoo.com.ar" <"/tmp/user1.new"
 else
 echo "ninguna modificacion"
