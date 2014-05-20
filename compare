@@ -17,6 +17,7 @@ then
 #echo "hubo modificacion"
 mail -s "User diferencia Filesystem" "mama21mama2000[at]yahoo.com.ar" <"/tmp/user1.new"
 else
+ls -lR /media/Disco160/www/user1/ > /tmp/user1
 echo "ninguna modificacion"
 fi
 done
